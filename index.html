@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+  <title>Cumulative CO2 Emissions in the United Kingdom Since 1750</title>
+  <h1>Cumulative CO2 Emissions in the United Kingdom Since 1750</h1>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h3>Click the buttons below to explore different centuries</h3>
+  <div class="button-container">
+      <img src="images/carriage.png" alt="Button 1" onclick="buttonClicked(1)">
+      <p>18th Century</p>
+  </div>
+  <div class="button-container">
+      <img src="images/factory.png" alt="Button 2" onclick="buttonClicked(2)">
+      <p>19th Century</p>
+  </div>
+  <div class="button-container">
+      <img src="images/rocket.jpg" alt="Button 3" onclick="buttonClicked(3)">
+      <p>20th Century</p>
+  </div>
+  <div class="button-container">
+      <img src="images/solar_panel.jpg" alt="Button 4" onclick="buttonClicked(4)">
+      <p>21st Century</p>
+  </div>
+  <div id="graph-container">
+  </div>
+  <h3>Drag the slider below to change the end date of the graph</h3>
+  <div id="slider-container">
+    <label for="dateSlider">End Date:</label>
+    <input type="range" id="dateSlider" min="0" max="49" value="49">
+    <span id="sliderValue">1799</span>
+  </div>
+  <div class="text-container">
+    <p id="updated-text">Default Text</p>
+  </div>
+  <script src="script.js"></script>
+  Sources:
+  <a href="https://www.explainthatstuff.com/timeline.html">Technology Timeline</a>
+  <a href="https://www.discover.ukri.org/a-brief-history-of-climate-change-discoveries/index.html">A brief history of climate change discoveries</a>
+  <a href="https://en.wikipedia.org/wiki/Industrial_Revolution">Industrial Revolution</a>
+  <a href="https://www.kaggle.com/datasets/moazzimalibhatti/co2-emission-by-countries-year-wise-17502022">CO2 emissions data</a> 
+</body>
+</html>
